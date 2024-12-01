@@ -1,5 +1,4 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import "../Assets/css/style.css"
 
@@ -11,17 +10,7 @@ function Header() {
                 <Logo>EASY<Span>FRONTEND</Span></Logo>
             </Left>
             <Right>
-                <Ulist>
-                    <List>
-                        <NavLink className={({ isActive })=> isActive ? "active" : ""} to="/">Home</NavLink>
-                    </List>
-                    <List>
-                        <NavLink className={({ isActive })=> isActive ? "active" : ""} to="/contact">Contact</NavLink>
-                    </List>
-                    <List>
-                        <NavLink className={({ isActive })=> isActive ? "active" : ""}to="/about">About</NavLink>
-                    </List>
-                </Ulist>
+                <Register>Login/SignUp</Register>
             </Right>
         </Container>
     </>
@@ -44,14 +33,14 @@ const Span = styled.span`
     color: #24a19c;
 `
 const Right = styled.div``
-const Ulist = styled.ul`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    list-style: none;
-`
-const List = styled.li`
-    margin-right: 60px;
+const Register = styled.a`
+    background: #24a19c;
+    color: #fff;
+    font-weight: bold;
+    padding: 15px 25px;
+    font-size: 16px;
+    border-radius: 9px;
+    cursor: pointer;
 `
 
 export default Header

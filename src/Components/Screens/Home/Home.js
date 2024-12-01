@@ -1,6 +1,7 @@
 import React from 'react'
 import Container1 from './Container1'
 import { Helmet } from 'react-helmet'
+import Container2 from './Container2'
 
 function Home() {
   return (
@@ -10,6 +11,7 @@ function Home() {
         </Helmet>
         
         <Container1 />
+        <Container2 />
     </>
   )
 }
